@@ -1050,7 +1050,7 @@
 <span class='doccomment'>///     &quot;$h29iv0s8:example.com&quot;</span>
 <span class='doccomment'>/// );</span>
 <span class='doccomment'>/// ```</span>
-<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>Eq</span>, <span class='ident'>Hash</span>, <span class='ident'>PartialEq</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>EventId</span> {
     <span class='ident'>hostname</span>: <span class='ident'>Host</span>,
     <span class='ident'>opaque_id</span>: <span class='ident'>String</span>,
@@ -1071,7 +1071,7 @@
 <span class='doccomment'>///     &quot;#ruma:example.com&quot;</span>
 <span class='doccomment'>/// );</span>
 <span class='doccomment'>/// ```</span>
-<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>Eq</span>, <span class='ident'>Hash</span>, <span class='ident'>PartialEq</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>RoomAliasId</span> {
     <span class='ident'>alias</span>: <span class='ident'>String</span>,
     <span class='ident'>hostname</span>: <span class='ident'>Host</span>,
@@ -1092,7 +1092,7 @@
 <span class='doccomment'>///     &quot;!n8f893n9:example.com&quot;</span>
 <span class='doccomment'>/// );</span>
 <span class='doccomment'>/// ```</span>
-<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>Eq</span>, <span class='ident'>Hash</span>, <span class='ident'>PartialEq</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>RoomId</span> {
     <span class='ident'>hostname</span>: <span class='ident'>Host</span>,
     <span class='ident'>opaque_id</span>: <span class='ident'>String</span>,
@@ -1113,7 +1113,7 @@
 <span class='doccomment'>///     &quot;@carl:example.com&quot;</span>
 <span class='doccomment'>/// );</span>
 <span class='doccomment'>/// ```</span>
-<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>PartialEq</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>Eq</span>, <span class='ident'>Hash</span>, <span class='ident'>PartialEq</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>UserId</span> {
     <span class='ident'>hostname</span>: <span class='ident'>Host</span>,
     <span class='ident'>localpart</span>: <span class='ident'>String</span>,
