@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Error","An error encountered when trying to parse an invalid ID string."],["Host","The host name of an URL."]],"struct":[["EventId","A Matrix event ID."],["RoomAliasId","A Matrix room alias ID."],["RoomId","A Matrix room ID."],["UserId","A Matrix user ID."]]});
