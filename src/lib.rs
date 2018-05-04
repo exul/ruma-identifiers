@@ -680,7 +680,9 @@ mod diesel_integration {
     use diesel::expression::AsExpression;
     use diesel::expression::bound::Bound;
     use diesel::row::Row;
-    use diesel::types::{FromSql, FromSqlRow, HasSqlType, IsNull, Nullable, Text, ToSql};
+    use diesel::serialize::Output;
+    use diesel::sql_types::{Text, Nullable};
+    use diesel::types::{FromSql, FromSqlRow, HasSqlType, IsNull, ToSql};
 
     macro_rules! diesel_impl {
         ($name:ident) => {
@@ -705,7 +707,7 @@ mod diesel_integration {
 
             impl<A, DB> ToSql<A, DB> for $crate::$name
             where DB: Backend + HasSqlType<A>, String: ToSql<A, DB> {
-                fn to_sql<W: Write>(&self, out: &mut W)
+                fn to_sql<W: Write>(&self, out: &mut Output<W, DB>)
                 -> Result<IsNull, Box<Error + Send + Sync>> {
                     self.to_string().to_sql(out)
                 }
