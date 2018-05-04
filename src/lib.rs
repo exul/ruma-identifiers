@@ -690,7 +690,7 @@ mod diesel_integration {
                 -> Result<Self, Box<Error + Send + Sync>> {
                     let string = <String as FromSql<A, DB>>::from_sql(bytes)?;
 
-                    $crate::$name::try_from(&string)
+                    $crate::$name::try_from(string.as_ref())
                         .map_err(|error| Box::new(error) as Box<Error + Send + Sync>)
                 }
             }
